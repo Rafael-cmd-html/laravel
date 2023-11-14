@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserCOntroller;
+use App\Http\Controllers\CarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +46,6 @@ Route::get('/division/{n1}/{n2}', function ($n1,$n2) {
 
 //Ruta controlador
 Route::get('/user', [UserCOntroller:: class, 'index']);
+Route::get('/carritos', [CarController:: class, 'index']);
+Route::get('/carritos/{id}', [CarController:: class, 'show']);
+
